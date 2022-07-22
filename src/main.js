@@ -55,7 +55,6 @@ themeToggleBtn.addEventListener('click', function() {
     
 });
 
-const tabs = new Tabs(tabElements, options);
 
 // create an array of objects with the id, trigger element (eg. button), and the content element
 const tabElements = [
@@ -74,11 +73,6 @@ const tabElements = [
         triggerEl: document.querySelector('#settings-tab-example'),
         targetEl: document.querySelector('#settings-example')
     },
-    {
-        id: 'contacts',
-        triggerEl: document.querySelector('#contacts-tab-example'),
-        targetEl: document.querySelector('#contacts-example')
-    }
 ];
 
 // options with default values
@@ -90,6 +84,8 @@ const options = {
         console.log('tab is shown');
     }
 };
+
+const tabs = new Tabs(tabElements, options);
 
 tabs.show('dashboard');
 

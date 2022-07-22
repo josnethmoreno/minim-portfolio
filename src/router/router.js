@@ -2,6 +2,7 @@
 const route = (event) => {
 	event = event || window.event;
 	event.preventDefault();
+	if(window.location.pathname === event.target.pathname) return
 	window.history.pushState({}, "", event.target.href);
 	handleLocation();
 }

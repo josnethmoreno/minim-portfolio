@@ -14,3 +14,19 @@
   	font-family: Source Code Pro;
   }
 }
+
+#home{
+  opacity: 0;
+  transform: translateY(50px);
+  animation: appereance .4s ease .3s forwards;
+}
+
+@keyframes appereance {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
